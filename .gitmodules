@@ -1,0 +1,3 @@
+[submodule "CUE4Parse_BlueprintDumping"]
+	path = CUE4Parse_BlueprintDumping
+	url = https://github.com/olshab/CUE4Parse_BlueprintDumping.git
