@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Detex.dll" />
     <None Remove="Resources\oo2core_9_win64.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Detex.dll" />
     <EmbeddedResource Include="Resources\oo2core_9_win64.dll" />
 	<EmbeddedResource Include="Resources\zlib-ng2.dll" />
   </ItemGroup>

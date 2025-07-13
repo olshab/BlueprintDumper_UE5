@@ -15,6 +15,7 @@ using CUE4Parse.UE4.Versions;
 using CUE4Parse.Utils;
 using CUE4Parse_Conversion;
 using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Textures.BC;
 using System.Reflection;
 
 namespace BlueprintDumper_UE5
@@ -48,6 +49,8 @@ namespace BlueprintDumper_UE5
             OodleHelper.Initialize(OodleBinaryFilepath);
             string ZlibBinaryFilepath = GetDll("zlib-ng2.dll");
             ZlibHelper.Initialize(ZlibBinaryFilepath);
+            string DetexBinaryFilepath = GetDll("Detex.dll");
+            DetexHelper.Initialize(DetexBinaryFilepath);
 
             _provider = InitializeProvider();
 
