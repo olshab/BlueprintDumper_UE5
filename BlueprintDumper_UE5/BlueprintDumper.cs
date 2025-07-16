@@ -133,11 +133,12 @@ namespace BlueprintDumper_UE5
 
             var VersionContainer = new VersionContainer(CUE4Parse_GameVersion);
             var Provider = new DefaultFileProvider(_dumpSettings.PaksDirectory, SearchOption.TopDirectoryOnly,
-                VersionContainer, StringComparer.Ordinal);
+                VersionContainer, StringComparer.OrdinalIgnoreCase);
             Provider.MappingsContainer = new FileUsmapTypeMappingsProvider(_dumpSettings.MappingsFilepath);
             Provider.Initialize();
             Provider.SubmitKey(new FGuid(), new FAesKey(_dumpSettings.AESKey));
             Provider.PostMount();
+            Provider.LoadVirtualPaths();
 
             return Provider;
         }
